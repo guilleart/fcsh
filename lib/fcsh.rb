@@ -34,7 +34,7 @@ class Fcsh
   # can run an CompileError when compile errors are found?
   def compc(command)
     puts "compc %s" % command if $DEBUG
-    @stdin.puts "compc %c" %command
+    @stdin.puts "compc %s" %command
     target_id = nil
     @stdout.each_line do |line|
       if line =~ /fcsh: Assigned (\d) as the compile target id/
